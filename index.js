@@ -131,3 +131,129 @@ const myeach=produ.forEach((item)=>{
     console.log(item)
 })
 console.log(myeach)
+
+
+const numbers2=[12,5,23,45,11,18,9,55,61,1];
+const n2=numbers2.filter((num)=>{
+    return num>50
+})
+console.log(n2);
+const n3=numbers2.filter((nu)=>{
+    return nu%2==0
+})
+console.log(n3)
+
+const filtering=produ.filter((product)=>{
+    return product.price>20000
+})
+console.log(filtering)
+
+//find
+const finding=numbers.find(function(number){
+    return number%2==0
+})
+console.log(finding)
+
+const cheapProduct=produ.find(function(pro){
+    return pro.price>30000
+})
+console.log(cheapProduct)
+console.log(cheapProduct)
+
+//reduce function
+
+const mynumbers=[1,2,3,4,5];
+const reducing=mynumbers.reduce((x,y)=>{
+   return x+y
+},0)
+console.log(reducing);
+
+
+
+
+
+class Team_Member{
+   name;
+   location;
+   constructor(name,location){
+    this.name=name;
+    this.location=location;
+   }
+   provideFeedBack(){
+    console.log(`${this.name} thank you for youre feedback`)
+}
+
+}
+
+
+const stydent={
+    name:"Kolim Uddin",
+    age:15,
+    class:"Ten",
+    marks:{
+     math:78,
+     physic:89,
+     chemistry:65
+    }
+}
+
+const marks=stydent.marks;
+const math=stydent.marks.math;
+const chemistry=stydent['marks']['math'];
+console.log(chemistry);
+
+// Object oriented
+class Instractor extends Team_Member{
+    name;
+    designation="Job Placement Commandous";
+    team="Job Placement";
+    location;
+    constructor(name,location,tech){
+        super(name,location);
+        this.tech=tech;
+    }
+    supportSession(time){
+        console.log(`start the support session at ${time}`);
+    }
+    createQuiz(module){
+        console.log(`Please create  quiz for module ${module}`)
+    }
+
+    provideFeedBack(){
+        console.log(`${this.name} thank you for youre feedback`)
+    }
+   developeThefeature(feature){
+    console.log(`Please develope the feature ${feature}`)
+   }
+   release(version){
+    console.log(`Please release the apps ${version}`)
+   }
+
+}
+
+class Student{
+    constructor(name,sub){
+        this.name=name;
+        this.sub=sub;
+    }
+}
+class Teacher extends Student{
+    constructor(name,sub,location){
+        super(name,sub);
+        this.location=location
+    }
+}
+const myteacher=new Teacher("Shahriar","math","Sarishabari");
+console.log(myteacher.name)
+
+
+const nums = [1,2,3,4,5];
+let output = nums.filter(n => n%2);
+console.log(output);
+
+
+
+
+
+
+
